@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331EF7801E0AFCA800AC23C1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331EF77F1E0AFCA800AC23C1 /* DetailViewController.swift */; };
+		337BC1931E09BA9500BB359A /* CeldaPersonalizada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337BC1921E09BA9500BB359A /* CeldaPersonalizada.swift */; };
+		3387717A1E2573ED0068285C /* tic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 338771791E2573ED0068285C /* tic.jpg */; };
 		33EAFAD81E030CD6008FEFAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAFAD71E030CD6008FEFAA /* AppDelegate.swift */; };
 		33EAFADA1E030CD6008FEFAA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAFAD91E030CD6008FEFAA /* FirstViewController.swift */; };
 		33EAFADC1E030CD6008FEFAA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAFADB1E030CD6008FEFAA /* SecondViewController.swift */; };
@@ -15,7 +18,6 @@
 		33EAFAE41E030CD6008FEFAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EAFAE21E030CD6008FEFAA /* LaunchScreen.storyboard */; };
 		33EAFAEF1E030CD6008FEFAA /* PracticaVistasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAFAEE1E030CD6008FEFAA /* PracticaVistasTests.swift */; };
 		33EAFAFA1E030CD6008FEFAA /* PracticaVistasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAFAF91E030CD6008FEFAA /* PracticaVistasUITests.swift */; };
-		33EAFB081E030E44008FEFAA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAFB071E030E44008FEFAA /* ThirdViewController.swift */; };
 		33EAFB0A1E0317A5008FEFAA /* Tarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAFB091E0317A5008FEFAA /* Tarea.swift */; };
 		33EAFB0C1E0319FA008FEFAA /* Torracat.png in Resources */ = {isa = PBXBuildFile; fileRef = 33EAFB0B1E0319FA008FEFAA /* Torracat.png */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		331EF77F1E0AFCA800AC23C1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		337BC1921E09BA9500BB359A /* CeldaPersonalizada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaPersonalizada.swift; sourceTree = "<group>"; };
+		338771791E2573ED0068285C /* tic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tic.jpg; sourceTree = "<group>"; };
 		33EAFAD41E030CD6008FEFAA /* PracticaVistas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaVistas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EAFAD71E030CD6008FEFAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33EAFAD91E030CD6008FEFAA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +57,6 @@
 		33EAFAF51E030CD6008FEFAA /* PracticaVistasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaVistasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EAFAF91E030CD6008FEFAA /* PracticaVistasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaVistasUITests.swift; sourceTree = "<group>"; };
 		33EAFAFB1E030CD6008FEFAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33EAFB071E030E44008FEFAA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		33EAFB091E0317A5008FEFAA /* Tarea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarea.swift; sourceTree = "<group>"; };
 		33EAFB0B1E0319FA008FEFAA /* Torracat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Torracat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,14 +111,16 @@
 			children = (
 				33EAFAD71E030CD6008FEFAA /* AppDelegate.swift */,
 				33EAFAD91E030CD6008FEFAA /* FirstViewController.swift */,
+				338771791E2573ED0068285C /* tic.jpg */,
 				33EAFADB1E030CD6008FEFAA /* SecondViewController.swift */,
-				33EAFB071E030E44008FEFAA /* ThirdViewController.swift */,
 				33EAFB091E0317A5008FEFAA /* Tarea.swift */,
 				33EAFB0B1E0319FA008FEFAA /* Torracat.png */,
 				33EAFADD1E030CD6008FEFAA /* Main.storyboard */,
 				33EAFAE01E030CD6008FEFAA /* Assets.xcassets */,
 				33EAFAE21E030CD6008FEFAA /* LaunchScreen.storyboard */,
 				33EAFAE51E030CD6008FEFAA /* Info.plist */,
+				337BC1921E09BA9500BB359A /* CeldaPersonalizada.swift */,
+				331EF77F1E0AFCA800AC23C1 /* DetailViewController.swift */,
 			);
 			path = PracticaVistas;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				33EAFAE41E030CD6008FEFAA /* LaunchScreen.storyboard in Resources */,
 				33EAFAE11E030CD6008FEFAA /* Assets.xcassets in Resources */,
 				33EAFADF1E030CD6008FEFAA /* Main.storyboard in Resources */,
+				3387717A1E2573ED0068285C /* tic.jpg in Resources */,
 				33EAFB0C1E0319FA008FEFAA /* Torracat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				33EAFADC1E030CD6008FEFAA /* SecondViewController.swift in Sources */,
+				337BC1931E09BA9500BB359A /* CeldaPersonalizada.swift in Sources */,
 				33EAFAD81E030CD6008FEFAA /* AppDelegate.swift in Sources */,
-				33EAFB081E030E44008FEFAA /* ThirdViewController.swift in Sources */,
+				331EF7801E0AFCA800AC23C1 /* DetailViewController.swift in Sources */,
 				33EAFADA1E030CD6008FEFAA /* FirstViewController.swift in Sources */,
 				33EAFB0A1E0317A5008FEFAA /* Tarea.swift in Sources */,
 			);
@@ -429,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PracticaVistas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sheila.PracticaVistas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PracticaVistas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sheila.PracticaVistas;
 				PRODUCT_NAME = "$(TARGET_NAME)";

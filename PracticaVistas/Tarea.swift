@@ -11,14 +11,12 @@ import UIKit
 class Tarea: NSObject {
     var titulo: String
     var descripcion: String
-    var realizada: Bool
-    var imagen: UIImage
+    var realizada: Bool = false
+    var imagen: UIImage = #imageLiteral(resourceName: "Torracat.png")
     
-    init(titulo: String, descripcion: String, realizada: Bool, imagen: UIImage) {
+    init(titulo: String, descripcion: String) {
         self.titulo = titulo
         self.descripcion = descripcion
-        self.realizada = realizada
-        self.imagen = imagen
     }
     
     override init(){

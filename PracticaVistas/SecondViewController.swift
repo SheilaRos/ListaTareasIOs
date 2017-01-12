@@ -9,7 +9,16 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    @IBOutlet weak var titulo: UITextField!
+    @IBOutlet weak var descripcion: UITextField!
+    @IBAction func accion(_ sender: UIButton) {
+        var t = Tarea(titulo: titulo.text!, descripcion: descripcion.text!)
+        tareas.append(t)
+        self.tabBarController?.selectedIndex = 0
+        titulo.text = ""
+        descripcion.text = ""
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+var tareas:[Tarea] = []
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-class FirstViewController: UIViewController {
-
+    @IBOutlet weak var tabla: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +21,54 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //cuantas filas tiene nuestra columna
+        return tareas.count
+    }
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //crear una celda
+        
+        let miCelda = tabla.dequeueReusableCell(withIdentifier: "miCelda") as! CeldaPersonalizada
+        miCelda.titulo.text = tareas[indexPath.row].titulo
+        miCelda.descripcion.text = tareas[indexPath.row].descripcion
+        miCelda.imagen.image = tareas[indexPath.row].imagen
+        if(tareas[indexPath.row].realizada){
+            miCelda.checkImage.image = #imageLiteral(resourceName: "Torracat.png")
+        }
+        return miCelda
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        tabla.reloadData()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var detalle: DetailViewController = segue.destination as! DetailViewController
+        var tareaIndex = tabla.indexPathForSelectedRow?.row
+        var tareaSeleccionada = tareas[tareaIndex!]
+        
+        detalle.tit = tareaSeleccionada.titulo
+        detalle.desc = tareaSeleccionada.descripcion
+        detalle.row = tareaIndex!
+        
+    }
+    override func viewWillAppear(_ animated: Bool){
+        tabla.reloadData()
+    }
+  
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]?{
+        var deleteAction = UITableViewRowAction(style: .default, title: "Borrar", handler: {(action, indexPath) -> Void in tareas.remove(at: indexPath.row)
+            self.tabla.reloadData()
+        })
+        var doneAction = UITableViewRowAction(style: .normal, title: "Hecha", handler: {(action, indexPath) -> Void in tareas[indexPath.row].realizada = true
+        })
+        return [deleteAction, doneAction]
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        //VACIA
+    }
+    
 }
 
