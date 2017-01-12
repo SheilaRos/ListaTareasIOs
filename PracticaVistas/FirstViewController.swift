@@ -34,7 +34,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         miCelda.descripcion.text = tareas[indexPath.row].descripcion
         miCelda.imagen.image = tareas[indexPath.row].imagen
         if(tareas[indexPath.row].realizada){
-            miCelda.checkImage.image = #imageLiteral(resourceName: "Torracat.png")
+            miCelda.checkImage.image = #imageLiteral(resourceName: "tic.jpg")
         }
         return miCelda
     }
@@ -56,17 +56,17 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool){
         tabla.reloadData()
     }
-  
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]?{
-        var deleteAction = UITableViewRowAction(style: .default, title: "Borrar", handler: {(action, indexPath) -> Void in tareas.remove(at: indexPath.row)
-            self.tabla.reloadData()
-        })
-        var doneAction = UITableViewRowAction(style: .normal, title: "Hecha", handler: {(action, indexPath) -> Void in tareas[indexPath.row].realizada = true
-        })
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        var deleteAction = UITableViewRowAction(style: .default, title: "Borrar", handler: {(action, IndexPath) -> Void in
+        tareas.remove(at: IndexPath.row)
+        self.tabla.reloadData()})
+        var doneAction = UITableViewRowAction(style: .default, title: "Hecho", handler: {(action, IndexPath) -> Void in
+        tareas[IndexPath.row].realizada = true
+        self.tabla.reloadData()})
         return [deleteAction, doneAction]
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+   func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         //VACIA
     }
     
